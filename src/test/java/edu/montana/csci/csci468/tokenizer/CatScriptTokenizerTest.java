@@ -8,10 +8,10 @@ import java.util.List;
 import static edu.montana.csci.csci468.tokenizer.TokenType.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CatScriptTokenizerTest extends CatscriptTestBase {
+public class CatScriptTokenizerTest extends CatscriptTestBase { //all tests pass
 
     @Test
-    public void basicTokenizerTest(){
+    public void basicTokenizerTest(){ //pass
         assertTokensAre("1 + 1", INTEGER, PLUS, INTEGER, EOF);
         assertTokensAre("1 + 1", "1", "+", "1", "<EOF>");
         assertTokensAre("1   +   1", INTEGER, PLUS, INTEGER, EOF);
@@ -21,7 +21,7 @@ public class CatScriptTokenizerTest extends CatscriptTestBase {
     }
 
     @Test
-    public void basicNumbers(){
+    public void basicNumbers(){ //pass
         assertTokensAre("1", INTEGER, EOF);
         assertTokensAre( "1", "1", "<EOF>");
         assertTokensAre("1 10 234234", INTEGER, INTEGER, INTEGER, EOF);
@@ -29,7 +29,7 @@ public class CatScriptTokenizerTest extends CatscriptTestBase {
     }
 
     @Test
-    public void basicString(){
+    public void basicString(){ //pass
         assertTokensAre("\"asdf\"", STRING, EOF);
         assertTokensAre( "\"asdf\"", "asdf", "<EOF>");
 
@@ -38,7 +38,7 @@ public class CatScriptTokenizerTest extends CatscriptTestBase {
     }
 
     @Test
-    public void unterminatedStrings(){
+    public void unterminatedStrings(){ //pass
         assertTokensAre("\"asdf", ERROR, EOF);
         assertTokensAre("\"asdf\"\"asdf", STRING, ERROR, EOF);
         assertTokensAre("\"asdf \"asdf\"", STRING, IDENTIFIER, ERROR, EOF);
@@ -46,16 +46,15 @@ public class CatScriptTokenizerTest extends CatscriptTestBase {
 
 
     @Test
-    public void escapedStrings(){
+    public void escapedStrings(){ //pass
         // this is the string "asdf\"asdf", with an escaped quote in it
         assertTokensAre("\"asdf\\\"asdf\"", STRING, EOF);
-
         // this is the string "asdf\", with an escape at the end of in it
         assertTokensAre("\"asdf\\", ERROR, EOF);
     }
 
     @Test
-    public void basicIdentifiers(){
+    public void basicIdentifiers(){ //pass
         assertTokensAre("asdf", IDENTIFIER, EOF);
         assertTokensAre( "asdf", "asdf", "<EOF>");
 
@@ -64,14 +63,14 @@ public class CatScriptTokenizerTest extends CatscriptTestBase {
     }
 
     @Test
-    public void basicKeywords(){
+    public void basicKeywords(){ //pass
         assertTokensAre("else false function for if in not null print return true var",
                 ELSE, FALSE, FUNCTION, FOR, IF, IN, NOT, NULL,
                 PRINT, RETURN, TRUE, VAR, EOF);
     }
 
     @Test
-    public void basicSyntax(){
+    public void basicSyntax(){ //pass
         assertTokensAre("( ) { } [ ] : , . - + / * != = == > >= < <=",
                 LEFT_PAREN, RIGHT_PAREN,
                 LEFT_BRACE, RIGHT_BRACE,
@@ -84,25 +83,25 @@ public class CatScriptTokenizerTest extends CatscriptTestBase {
     }
 
     @Test
-    public void commentsAreIgnored(){
+    public void commentsAreIgnored(){ //pass
         assertTokensAre("/ //   //// asdfasdf \"asdf\"\n" +
                         "  / // asdf",
                 SLASH, SLASH, EOF);
     }
 
     @Test
-    public void compoundTokensTokenizeProperly() {
+    public void compoundTokensTokenizeProperly() { //pass
         assertTokensAre("1+2", INTEGER, PLUS, INTEGER, EOF);
         assertTokensAre("\"\".\"\"", STRING, DOT, STRING, EOF);
     }
 
     @Test
-    public void listLiteralTokenization() {
+    public void listLiteralTokenization() { //pass
         assertTokensAre("[1, 2, 3]", LEFT_BRACKET, INTEGER, COMMA, INTEGER, COMMA, INTEGER, RIGHT_BRACKET, EOF);
     }
 
     @Test
-    public void linesAreCorrect() {
+    public void linesAreCorrect() { //pass
         final List<Token> tokenList = getTokensAsList("a\n b\n  c");
         assertEquals(1, tokenList.get(0).getLine());
         assertEquals(2, tokenList.get(1).getLine());
@@ -110,7 +109,7 @@ public class CatScriptTokenizerTest extends CatscriptTestBase {
     }
 
     @Test
-    public void lineOffsetsAreCorrect() {
+    public void lineOffsetsAreCorrect() { //pass
         final List<Token> tokenList = getTokensAsList("a\n b\n  c d\nfoo");
         assertEquals(0, tokenList.get(0).getLineOffset());
         assertEquals(1, tokenList.get(1).getLineOffset());
@@ -120,7 +119,7 @@ public class CatScriptTokenizerTest extends CatscriptTestBase {
     }
 
     @Test
-    public void startsAreCorrect() {
+    public void startsAreCorrect() { //pass
         final List<Token> tokenList = getTokensAsList("a\n b\n  c");
         assertEquals(0, tokenList.get(0).getStart());
         assertEquals(3, tokenList.get(1).getStart());
@@ -128,7 +127,7 @@ public class CatScriptTokenizerTest extends CatscriptTestBase {
     }
 
     @Test
-    public void endsAreCorrect() {
+    public void endsAreCorrect() { //pass
         List<Token> tokenList = getTokensAsList("a\n b\n  c");
         assertEquals(1, tokenList.get(0).getEnd());
         assertEquals(4, tokenList.get(1).getEnd());
@@ -141,7 +140,7 @@ public class CatScriptTokenizerTest extends CatscriptTestBase {
     }
 
     @Test
-    public void varStatement(){
+    public void varStatement(){ //pass
         assertTokensAre("var x = 10",
                 VAR, IDENTIFIER, EQUAL, INTEGER, EOF);
     }

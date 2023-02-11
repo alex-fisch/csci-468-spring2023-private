@@ -6,7 +6,7 @@ public class CatScriptTokenizer {
 
     TokenList tokenList;
     String src;
-    int postion = 0;
+    int position = 0;
     int line = 1;
     int lineOffset = 0;
 
@@ -16,16 +16,15 @@ public class CatScriptTokenizer {
         tokenize();
     }
 
-    private void tokenize() {
-        consumeWhitespace();
+    private void tokenize() { //done
         while (!tokenizationEnd()) {
-            scanToken();
             consumeWhitespace();
+            scanToken();
         }
-        tokenList.addToken(EOF, "<EOF>", postion, postion, line, lineOffset);
+        tokenList.addToken(EOF, "<EOF>", position, position, line, lineOffset);
     }
 
-    private void scanToken() {
+    private void scanToken() { //done
         if(scanNumber()) {
             return;
         }
@@ -38,137 +37,164 @@ public class CatScriptTokenizer {
         scanSyntax();
     }
 
-    private boolean scanString() {
-        // TODO implement string scanning here!
-        return false;
-    }
+    private boolean scanString() { //done
+        if (peek() != '\"') return false;
+        char str_delimiter = takeChar();
 
-    private boolean scanIdentifier() {
-        if( isAlpha(peek())) {
-            int start = postion;
-            while (isAlphaNumeric(peek())) {
-                takeChar();
+        int start = position;
+        while (peek() != '\"' && !tokenizationEnd()) {
+            if (peek() == '\\') {
+                matchAndConsume('\\');
+                if (tokenizationEnd()) break;
             }
-            String value = src.substring(start, postion);
-            if (KEYWORDS.containsKey(value)) {
-                tokenList.addToken(KEYWORDS.get(value), value, start, postion, line, lineOffset);
-            } else {
-                tokenList.addToken(IDENTIFIER, value, start, postion, line, lineOffset);
-            }
-            return true;
-        } else {
-            return false;
+            takeChar();
         }
-    }
+        String value = src.substring(start, position);
 
-    private boolean scanNumber() {
-        if(isDigit(peek())) {
-            int start = postion;
-            while (isDigit(peek())) {
-                takeChar();
-            }
-            tokenList.addToken(INTEGER, src.substring(start, postion), start, postion, line, lineOffset);
-            return true;
+        if (!tokenizationEnd()) {
+            takeChar();
+            tokenList.addToken(STRING, value, start, position, line, lineOffset);
         } else {
-            return false;
+            tokenList.addToken(ERROR, value, start, position, line, lineOffset);
         }
+        return true;
     }
 
-    private void scanSyntax() {
-        // TODO - implement rest of syntax scanning
-        //      - implement comments
-        int start = postion;
-        if(matchAndConsume('+')) {
-            tokenList.addToken(PLUS, "+", start, postion, line, lineOffset);
-        } else if(matchAndConsume('-')) {
-            tokenList.addToken(MINUS, "-", start, postion, line, lineOffset);
-        } else if(matchAndConsume('/')) {
+    private boolean scanIdentifier() { //done
+        if (!isAlpha(peek())) return false;
+
+        int start = position;
+        while (isAlphaNumeric(peek())) takeChar();
+
+        String value = src.substring(start, position);
+        TokenType type = KEYWORDS.containsKey(value) ? KEYWORDS.get(value) : IDENTIFIER;
+        tokenList.addToken(type, value, start, position, line, lineOffset);
+
+        return true;
+    }
+
+    private boolean scanNumber() { //done
+        int start = position;
+        if (!isDigit(peek())) return false;
+        while (isDigit(peek())) takeChar();
+        tokenList.addToken(INTEGER, src.substring(start, position), start, position, line, lineOffset);
+        return true;
+    }
+
+    private void scanSyntax() { //done
+        int start = position;
+
+        if(matchAndConsume('(')) tokenList.addToken(LEFT_PAREN, "(", start, position, line, lineOffset);
+        else if(matchAndConsume(')')) tokenList.addToken(RIGHT_PAREN, ")", start, position, line, lineOffset);
+        else if(matchAndConsume('{')) tokenList.addToken(LEFT_BRACE, "{", start, position, line, lineOffset);
+        else if(matchAndConsume('}')) tokenList.addToken(RIGHT_BRACE, "}", start, position, line, lineOffset);
+        else if(matchAndConsume('[')) tokenList.addToken(LEFT_BRACKET, "[", start, position, line, lineOffset);
+        else if(matchAndConsume(']')) tokenList.addToken(RIGHT_BRACKET, "]", start, position, line, lineOffset);
+        else if(matchAndConsume(':')) tokenList.addToken(COLON, ":", start, position, line, lineOffset);
+        else if(matchAndConsume(',')) tokenList.addToken(COMMA, ",", start, position, line, lineOffset);
+        else if(matchAndConsume('.')) tokenList.addToken(DOT, ".", start, position, line, lineOffset);
+        else if(matchAndConsume('-')) tokenList.addToken(MINUS, "-", start, position, line, lineOffset);
+        else if(matchAndConsume('+')) tokenList.addToken(PLUS, "+", start, position, line, lineOffset);
+
+        else if(matchAndConsume('/')) {
             if (matchAndConsume('/')) {
+
                 while (peek() != '\n' && !tokenizationEnd()) {
                     takeChar();
                 }
             } else {
-                tokenList.addToken(SLASH, "-", start, postion, line, lineOffset);
+                tokenList.addToken(SLASH, "/", start, position, line, lineOffset);
             }
-        } else if(matchAndConsume('=')) {
+        }
+        else if(matchAndConsume('*')) tokenList.addToken(STAR, "*", start, position, line, lineOffset);
+        else if (matchAndConsume('!')) {
             if (matchAndConsume('=')) {
-                tokenList.addToken(EQUAL_EQUAL, "==", start, postion, line, lineOffset);
+                tokenList.addToken(BANG_EQUAL, "!=", start, position, line, lineOffset);
+            }
+        }
+        else if(matchAndConsume('=')) {
+            if (matchAndConsume('=')) {
+                tokenList.addToken(EQUAL_EQUAL, "==", start, position, line, lineOffset);
             } else {
-                tokenList.addToken(EQUAL, "=", start, postion, line, lineOffset);
+                tokenList.addToken(EQUAL, "=", start, position, line, lineOffset);
             }
-        } else {
-            tokenList.addToken(ERROR, "<Unexpected Token: [" + takeChar() + "]>", start, postion, line, lineOffset);
         }
+        else if(matchAndConsume('>')) {
+            if (matchAndConsume('=')) {
+                tokenList.addToken(GREATER_EQUAL, ">=", start, position, line, lineOffset);
+            } else {
+                tokenList.addToken(GREATER, ">", start, position, line, lineOffset);
+            }
+        }
+        else if(matchAndConsume('<')) {
+            if (matchAndConsume('=')) {
+                tokenList.addToken(LESS_EQUAL, "<=", start, position, line, lineOffset);
+            } else {
+                tokenList.addToken(LESS, "<", start, position, line, lineOffset);
+            }
+        }
+        else tokenList.addToken(ERROR, "<Unexpected Token: [" + takeChar() + "]>", start, position, line, lineOffset);
     }
 
-    private void consumeWhitespace() {
-        // TODO update line and lineOffsets
-        while (!tokenizationEnd()) {
+    private void consumeWhitespace() { //done
+        while (!tokenizationEnd() && (peek() == ' ' || peek() == '\r' || peek() == '\t' || peek() == '\n')) {
             char c = peek();
-            if (c == ' ' || c == '\r' || c == '\t') {
-                postion++;
-                continue;
-            } else if (c == '\n') {
-                postion++;
-                continue;
+            position++;
+            if (c == '\n') {
+                line++;
+                lineOffset = 0;
+            } else {
+                lineOffset++;
             }
-            break;
         }
     }
 
-    //===============================================================
-    // Utility functions
-    //===============================================================
-
-    private char peek() {
+    private char peek() { //done
         if (tokenizationEnd()) return '\0';
-        return src.charAt(postion);
+        return src.charAt(position);
     }
 
-    private boolean isAlpha(char c) {
-        return (c >= 'a' && c <= 'z') ||
-                (c >= 'A' && c <= 'Z') ||
-                c == '_';
+    private boolean isAlpha(char c) { //done
+        return Character.isLetter(c) || c == '_';
     }
 
-    private boolean isAlphaNumeric(char c) {
-        return isAlpha(c) || isDigit(c);
+    private boolean isAlphaNumeric(char c) { //done
+        return Character.isLetterOrDigit(c);
     }
 
-    private boolean isDigit(char c) {
-        return c >= '0' && c <= '9';
+    private boolean isDigit(char c) {//done
+        return Character.isDigit(c);
     }
 
-    private char takeChar() {
-        char c = src.charAt(postion);
-        postion++;
+    private char takeChar() { //done
+        char c = src.charAt(position);
+        position++;
+        lineOffset++;
         return c;
     }
 
-    private boolean tokenizationEnd() {
-        return postion >= src.length();
+    private boolean tokenizationEnd() { //done
+        return !(position < src.length());
     }
 
-    public boolean matchAndConsume(char c) {
-        if (peek() == c) {
-            takeChar();
-            return true;
-        }
-        return false;
+    public boolean matchAndConsume(char c) { //done
+        return (peek() == c) && takeChar() != '\0';
     }
 
-    public TokenList getTokens() {
+    public TokenList getTokens() { //done
         return tokenList;
     }
 
     @Override
-    public String toString() {
-        if (tokenizationEnd()) {
-            return src + "-->[]<--";
-        } else {
-            return src.substring(0, postion) + "-->[" + peek() + "]<--" +
-                    ((postion == src.length() - 1) ? "" :
-                            src.substring(postion + 1, src.length() - 1));
+    public String toString() { //done
+        StringBuilder sb = new StringBuilder(src);
+        if (!tokenizationEnd()) {
+            int start = position;
+            int end = Math.min(position + 1, src.length());
+            sb.insert(end, "<--");
+            sb.insert(start, "[" + peek() + "]-->");
         }
+        return sb.toString();
     }
 }
+
