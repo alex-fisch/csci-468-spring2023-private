@@ -41,8 +41,8 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.828 s
-[INFO] Finished at: 2023-02-28T02:38:23-07:00
+[INFO] Total time:  0.931 s
+[INFO] Finished at: 2023-02-28T10:06:46-07:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project csci-468-spring2022: Compilation failure: Compilation failure: 
 [ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[182,13] cannot find symbol

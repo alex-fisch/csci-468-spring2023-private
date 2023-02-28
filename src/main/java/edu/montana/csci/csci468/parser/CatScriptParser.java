@@ -101,6 +101,7 @@ public class CatScriptParser {
             additiveExpression.setStart(lhsExpression.getStart());
             additiveExpression.setEnd(rhsExpression.getEnd());
             lhsExpression = additiveExpression;
+<<<<<<< HEAD
         }
         return lhsExpression;
     }
@@ -135,6 +136,42 @@ public class CatScriptParser {
             lhsExpression = factorExpression;
         }
         return lhsExpression;
+=======
+        }
+        return lhsExpression;
+    }
+    private Expression parseEqualityExpression() {
+        Expression lhsExpression = parseComparisonExpression();
+        if (!tokens.match(EQUAL_EQUAL, BANG_EQUAL)) {
+            return lhsExpression;
+        }
+        Token token = tokens.consumeToken();
+        Expression rhsExpression = parseComparisonExpression();
+        return new EqualityExpression(token, lhsExpression, rhsExpression);
+    }
+    private Expression parseComparisonExpression() {
+        Expression lhsExpression = parseAdditiveExpression();
+        if (!tokens.match(GREATER, GREATER_EQUAL, LESS, LESS_EQUAL)) {
+            return lhsExpression;
+        }
+        Token token = tokens.consumeToken();
+        Expression rhsExpression = parseAdditiveExpression();
+        return new ComparisonExpression(token, lhsExpression, rhsExpression);
+    }
+
+
+    private Expression parseFactorExpression() {
+        Expression lhsExpression = parseUnaryExpression();
+        while (tokens.match(SLASH, STAR)) {
+            Token operator_token = tokens.consumeToken();
+            final Expression rhsExpression = parseUnaryExpression();
+            FactorExpression factorExpression = new FactorExpression(operator_token, lhsExpression, rhsExpression);
+            factorExpression.setStart(lhsExpression.getStart());
+            factorExpression.setEnd(rhsExpression.getEnd());
+            lhsExpression = factorExpression;
+        }
+        return lhsExpression;
+>>>>>>> 8ed3181c15315ac33edb89f2d5b2e60ec8b24b03
     }
 
     private Expression parseUnaryExpression() {
