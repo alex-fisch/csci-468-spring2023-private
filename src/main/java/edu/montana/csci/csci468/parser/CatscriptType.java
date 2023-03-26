@@ -2,6 +2,7 @@ package edu.montana.csci.csci468.parser;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class CatscriptType {
 
@@ -32,9 +33,22 @@ public class CatscriptType {
     }
 
     // TODO memoize this call
+    static final ConcurrentHashMap<CatscriptType, ListType> LIST_TYPE_CACHE = new ConcurrentHashMap<>();
+
     public static CatscriptType getListType(CatscriptType type) {
-        return new ListType(type);
+        // get the list type from cache storage
+        ListType list_type = LIST_TYPE_CACHE.get(type);
+        // check if list_type exists
+        if (list_type == null) { // list_type does NOT exist
+            // create a new instance of the ListType
+            list_type = new ListType(type);
+            // insert the new list type instance into out cache storage
+            LIST_TYPE_CACHE.put(type, list_type);
+        }
+        // return the list_type
+        return list_type;
     }
+
 
     @Override
     public String toString() {

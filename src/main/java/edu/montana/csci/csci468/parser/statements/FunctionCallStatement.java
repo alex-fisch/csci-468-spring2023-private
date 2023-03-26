@@ -2,10 +2,13 @@ package edu.montana.csci.csci468.parser.statements;
 
 import edu.montana.csci.csci468.bytecode.ByteCodeGenerator;
 import edu.montana.csci.csci468.eval.CatscriptRuntime;
+import edu.montana.csci.csci468.parser.CatscriptType;
 import edu.montana.csci.csci468.parser.SymbolTable;
 import edu.montana.csci.csci468.parser.expressions.Expression;
 import edu.montana.csci.csci468.parser.expressions.FunctionCallExpression;
+import org.objectweb.asm.Opcodes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FunctionCallStatement extends Statement {
@@ -32,7 +35,12 @@ public class FunctionCallStatement extends Statement {
     //==============================================================
     @Override
     public void execute(CatscriptRuntime runtime) {
-        super.execute(runtime);
+        List<Object> fncArgs = new ArrayList<>();
+        for (Expression expr : getArguments()) {
+            fncArgs.add(expr.evaluate(runtime));
+        }
+        FunctionDefinitionStatement fnc = getProgram().getFunction(getName());
+        fnc.invoke(runtime, fncArgs);
     }
 
     @Override
@@ -42,6 +50,6 @@ public class FunctionCallStatement extends Statement {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        super.compile(code);
+        expression.compile(code);
     }
 }

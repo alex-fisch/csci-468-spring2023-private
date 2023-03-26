@@ -2,11 +2,13 @@ package edu.montana.csci.csci468.parser.statements;
 
 import edu.montana.csci.csci468.bytecode.ByteCodeGenerator;
 import edu.montana.csci.csci468.eval.CatscriptRuntime;
+import edu.montana.csci.csci468.eval.ReturnException;
 import edu.montana.csci.csci468.parser.CatscriptType;
 import edu.montana.csci.csci468.parser.ErrorType;
 import edu.montana.csci.csci468.parser.ParseError;
 import edu.montana.csci.csci468.parser.SymbolTable;
 import edu.montana.csci.csci468.parser.expressions.Expression;
+import org.objectweb.asm.Opcodes;
 
 public class ReturnStatement extends Statement {
     private Expression expression;
@@ -43,7 +45,7 @@ public class ReturnStatement extends Statement {
     //==============================================================
     @Override
     public void execute(CatscriptRuntime runtime) {
-        super.execute(runtime);
+        throw new ReturnException(expression.evaluate(runtime));
     }
 
     @Override
@@ -53,7 +55,20 @@ public class ReturnStatement extends Statement {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        super.compile(code);
+        // compile code
+        expression.compile(code);
+
+        // are we returning an object?
+        if(function.getType().equals(CatscriptType.OBJECT)){
+            box(code, expression.getType());
+        }
+
+        // add instruction depending on type
+        if(function.getType().equals(CatscriptType.INT) || function.getType().equals(CatscriptType.BOOLEAN)) {
+            code.addInstruction(Opcodes.IRETURN);
+        } else {
+            code.addInstruction(Opcodes.ARETURN);
+        }
     }
 
 }

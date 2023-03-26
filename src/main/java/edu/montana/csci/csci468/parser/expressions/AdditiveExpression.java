@@ -10,6 +10,8 @@ import edu.montana.csci.csci468.tokenizer.Token;
 import edu.montana.csci.csci468.tokenizer.TokenType;
 import org.objectweb.asm.Opcodes;
 
+import static edu.montana.csci.csci468.bytecode.ByteCodeGenerator.internalNameFor;
+
 public class AdditiveExpression extends Expression {
 
     private final Token operator;
@@ -67,13 +69,20 @@ public class AdditiveExpression extends Expression {
 
     @Override
     public Object evaluate(CatscriptRuntime runtime) {
-        Integer lhsValue = (Integer) leftHandSide.evaluate(runtime);
-        Integer rhsValue = (Integer) rightHandSide.evaluate(runtime);
-        //TODO handle string case
-        if (isAdd()) {
-            return lhsValue + rhsValue;
+//        Object lhsValue = leftHandSide.evaluate(runtime);
+//        Object rhsValue = rightHandSide.evaluate(runtime);
+        if (getType().equals(CatscriptType.STRING)) {
+            String lhsStrVal = String.valueOf(leftHandSide.evaluate(runtime));
+            String rhsStrVal = String.valueOf(rightHandSide.evaluate(runtime));
+            return lhsStrVal + rhsStrVal;
         } else {
-            return lhsValue - rhsValue;
+            Integer lhsIntVal = (Integer) leftHandSide.evaluate(runtime);
+            Integer rhsIntVal = (Integer) rightHandSide.evaluate(runtime);
+            if (isAdd()) {
+                return lhsIntVal + rhsIntVal;
+            } else {
+                return lhsIntVal - rhsIntVal;
+            }
         }
     }
 
@@ -86,13 +95,50 @@ public class AdditiveExpression extends Expression {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        getLeftHandSide().compile(code);
-        getRightHandSide().compile(code);
-        if (isAdd()) {
-            code.addInstruction(Opcodes.IADD);
-        } else {
-            code.addInstruction(Opcodes.ISUB);
+        // the AdditiveExpression is used for integer types and also for strings
+        // we need to handle these two possibilities
+        // Situation examples
+        // 1.) var x = 1 + 1 (or 1 - 1)
+        // 2.) var x = 'a' + 'b'
+
+        // Are we dealing with integers?
+        if (getType().equals(CatscriptType.INT)) { // yes, we are dealing with ints
+            // Example: var x = 1 - 1
+            // compile left-hand side
+            getLeftHandSide().compile(code);
+            // compile right-hand side
+            getRightHandSide().compile(code);
+            // is this an additive or subtraction expression
+            if (isAdd()) {
+                // additive
+                code.addInstruction(Opcodes.IADD);
+            } else {
+                // subtraction
+                code.addInstruction(Opcodes.ISUB);
+            }
+        } else { // we are dealing with strings, potentially
+            // compile left-hand side
+            getLeftHandSide().compile(code);
+            // is left-hand side an int?
+            if (getLeftHandSide().getType().equals(CatscriptType.INT)) {
+                code.addMethodInstruction(Opcodes.INVOKESTATIC, internalNameFor(String.class), "valueOf", "(I)Ljava/lang/String;");
+            } else {
+                code.addMethodInstruction(Opcodes.INVOKESTATIC, internalNameFor(String.class), "valueOf", "(Ljava/lang/Object;)Ljava/lang/String;");
+            }
+
+            // compile right-hand side
+            getRightHandSide().compile(code);
+
+            if (getRightHandSide().getType().equals(CatscriptType.INT)) {
+                code.addMethodInstruction(Opcodes.INVOKESTATIC, internalNameFor(String.class), "valueOf", "(I)Ljava/lang/String;");
+            } else {
+                code.addMethodInstruction(Opcodes.INVOKESTATIC, internalNameFor(String.class), "valueOf", "(Ljava/lang/Object;)Ljava/lang/String;");
+            }
+
+            code.addMethodInstruction(Opcodes.INVOKEVIRTUAL, internalNameFor(String.class), "concat", "(Ljava/lang/String;)Ljava/lang/String;");
+
         }
+
     }
 
 }
