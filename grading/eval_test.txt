@@ -12,188 +12,87 @@
 [INFO] Changes detected - recompiling the module!
 [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
 [INFO] Compiling 47 source files to /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/target/classes
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[104,1] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[104,3] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[104,5] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[105,9] > expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[139,1] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[139,3] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[139,5] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[139,7] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[140,9] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[141,9] illegal start of type
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[141,29] <identifier> expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[143,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[145,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[147,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[149,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[150,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[151,5] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[154,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[156,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[158,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[159,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[160,5] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[165,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[167,19] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[168,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[169,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[170,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[171,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[172,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[174,1] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[174,9] malformed floating-point literal
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[180,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[182,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[183,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[184,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[185,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[186,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[187,5] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[193,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[195,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[197,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[198,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[199,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[200,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[202,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[203,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[204,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[205,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[207,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[208,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[209,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[210,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[212,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[213,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[214,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[215,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[217,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[218,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[219,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[220,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[222,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[223,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[224,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[226,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[229,17] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[230,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[232,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[234,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[236,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[238,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[239,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[240,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[241,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[243,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[244,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[249,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[252,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[253,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[255,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[257,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[259,5] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[266,5] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[271,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[273,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[274,9] class, interface, or enum expected
-[INFO] 85 errors 
-[INFO] -------------------------------------------------------------
+[WARNING] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/bytecode/MethodGenerator.java: /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/bytecode/MethodGenerator.java uses or overrides a deprecated API.
+[WARNING] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/bytecode/MethodGenerator.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatscriptType.java: Some input files use unchecked or unsafe operations.
+[WARNING] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatscriptType.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ csci-468-spring2022 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ csci-468-spring2022 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 27 source files to /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/target/test-classes
+[WARNING] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/test/java/edu/montana/csci/csci468/CatscriptTestBase.java: Some input files use unchecked or unsafe operations.
+[WARNING] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/test/java/edu/montana/csci/csci468/CatscriptTestBase.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ csci-468-spring2022 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
+[INFO] Running edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
+[ERROR] Tests run: 21, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.01 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
+[ERROR] elseStatementEnsuresClosingBrace  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.StringIndexOutOfBoundsException: Index 30 out of bounds for length 30
+	at edu.montana.csci.csci468.parser.CatscriptParserStatementsTest.elseStatementEnsuresClosingBrace(CatscriptParserStatementsTest.java:68)
+
+[INFO] Running edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest
+[INFO] Running edu.montana.csci.csci468.parser.CatscriptParserErrorsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in edu.montana.csci.csci468.parser.CatscriptParserErrorsTest
+[INFO] Running edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
+[ERROR] Tests run: 8, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
+[ERROR] ifStatementBranchesDoNotConflic  Time elapsed: 0 s  <<< ERROR!
+java.lang.StringIndexOutOfBoundsException: Index 45 out of bounds for length 45
+	at edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest.ifStatementBranchesDoNotConflic(CatscriptParserSymbolCheckingTest.java:59)
+
+[ERROR] paramsDoNotConflictWithEachOther  Time elapsed: 0 s  <<< ERROR!
+java.lang.StringIndexOutOfBoundsException: Index 56 out of bounds for length 56
+	at edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest.paramsDoNotConflictWithEachOther(CatscriptParserSymbolCheckingTest.java:52)
+
+[INFO] Running edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
+[INFO] Running edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest
+[ERROR] Tests run: 9, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.004 s <<< FAILURE! - in edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest
+[ERROR] localVarStatementsWorkProperly  Time elapsed: 0 s  <<< ERROR!
+java.lang.StringIndexOutOfBoundsException: Index 49 out of bounds for length 49
+	at edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest.localVarStatementsWorkProperly(CatscriptStatementExecutionTest.java:43)
+
+[ERROR] varInsideFunctionWorksProperly  Time elapsed: 0 s  <<< ERROR!
+java.lang.StringIndexOutOfBoundsException: Index 64 out of bounds for length 64
+	at edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest.varInsideFunctionWorksProperly(CatscriptStatementExecutionTest.java:51)
+
+[INFO] Running edu.montana.csci.csci468.eval.CatscriptBasicExpressionEvalTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in edu.montana.csci.csci468.eval.CatscriptBasicExpressionEvalTest
+[INFO] Running edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   CatscriptStatementExecutionTest.localVarStatementsWorkProperly:43->CatscriptTestBase.executeProgram:101 » StringIndexOutOfBounds
+[ERROR]   CatscriptStatementExecutionTest.varInsideFunctionWorksProperly:51->CatscriptTestBase.executeProgram:101 » StringIndexOutOfBounds
+[ERROR]   CatscriptParserStatementsTest.elseStatementEnsuresClosingBrace:68->CatscriptTestBase.parseStatement:45->CatscriptTestBase.parseStatement:54 » StringIndexOutOfBounds
+[ERROR]   CatscriptParserSymbolCheckingTest.ifStatementBranchesDoNotConflic:59->CatscriptTestBase.parseStatement:41->CatscriptTestBase.parseStatement:45->CatscriptTestBase.parseStatement:54 » StringIndexOutOfBounds
+[ERROR]   CatscriptParserSymbolCheckingTest.paramsDoNotConflictWithEachOther:52->CatscriptTestBase.parseStatement:41->CatscriptTestBase.parseStatement:45->CatscriptTestBase.parseStatement:54 » StringIndexOutOfBounds
+[INFO] 
+[ERROR] Tests run: 116, Failures: 0, Errors: 5, Skipped: 0
+[INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.580 s
-[INFO] Finished at: 2023-03-26T15:56:41-06:00
+[INFO] Total time:  2.058 s
+[INFO] Finished at: 2023-03-27T14:41:23-06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project csci-468-spring2022: Compilation failure: Compilation failure: 
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[104,1] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[104,3] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[104,5] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[105,9] > expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[139,1] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[139,3] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[139,5] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[139,7] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[140,9] illegal start of expression
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[141,9] illegal start of type
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[141,29] <identifier> expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[143,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[145,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[147,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[149,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[150,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[151,5] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[154,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[156,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[158,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[159,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[160,5] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[165,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[167,19] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[168,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[169,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[170,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[171,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[172,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[174,1] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[174,9] malformed floating-point literal
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[180,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[182,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[183,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[184,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[185,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[186,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[187,5] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[193,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[195,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[197,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[198,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[199,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[200,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[202,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[203,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[204,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[205,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[207,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[208,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[209,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[210,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[212,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[213,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[214,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[215,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[217,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[218,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[219,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[220,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[222,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[223,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[224,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[226,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[229,17] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[230,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[232,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[234,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[236,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[238,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[239,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[240,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[241,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[243,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[244,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[249,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[252,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[253,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[255,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[257,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[259,5] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[266,5] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[271,9] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[273,13] class, interface, or enum expected
-[ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[274,9] class, interface, or enum expected
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
