@@ -65,22 +65,15 @@ public class ListLiteralExpression extends Expression {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        // Add new opcode
         String linkedListInternalClassName = internalNameFor(LinkedList.class);
         code.addTypeInstruction(Opcodes.NEW, linkedListInternalClassName);
-        // add dup instructions - duplicate the value on top of the stack
         code.addInstruction(Opcodes.DUP);
-        // add invoke special - invoke instance method on object objectref and puts the result on the stack
-        code.addMethodInstruction(Opcodes.INVOKESPECIAL, linkedListInternalClassName,"<init>","()V");
-        // loop expression values
+        code.addMethodInstruction(Opcodes.INVOKESPECIAL, linkedListInternalClassName, "<init>", "()V");
         for (Expression value : values) {
-            // add dup instruction
             code.addInstruction(Opcodes.DUP);
-            // compile expression value
             value.compile(code);
             box(code, value.getType());
-            code.addMethodInstruction(Opcodes.INVOKEVIRTUAL, linkedListInternalClassName, "add", "(Ljava/lang/Object;)Z" );
-            // add pop instruction
+            code.addMethodInstruction(Opcodes.INVOKEVIRTUAL, linkedListInternalClassName, "add", "(Ljava/lang/Object;)Z");
             code.addInstruction(Opcodes.POP);
         }
     }

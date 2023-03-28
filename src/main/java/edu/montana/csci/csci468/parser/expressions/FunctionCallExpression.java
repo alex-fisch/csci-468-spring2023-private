@@ -90,9 +90,7 @@ public class FunctionCallExpression extends Expression {
     }
 
     public void compile(ByteCodeGenerator code) {
-        // build the descriptor
         String descriptor = "(";
-        // iterate over arguments
         for (Expression argumentExpression : getArguments()) {
             if (argumentExpression.getType().equals(CatscriptType.BOOLEAN) || argumentExpression.getType().equals(CatscriptType.INT)) {
                 descriptor = descriptor + "I";
@@ -103,22 +101,19 @@ public class FunctionCallExpression extends Expression {
         descriptor = descriptor + ")";
         if (getType().equals(CatscriptType.VOID)) {
             descriptor = descriptor + "V";
-        } else if (type.equals(CatscriptType.BOOLEAN) || type.equals(CatscriptType.INT)) {
+        } else if (getType().equals(CatscriptType.BOOLEAN) || getType().equals(CatscriptType.INT)) {
             descriptor = descriptor + "I";
         } else {
             descriptor = descriptor + "L" + internalNameFor(getType().getJavaType()) + ";";
         }
 
-
         code.addVarInstruction(Opcodes.ALOAD, 0);
-
         for (Expression arg : getArguments()) {
             arg.compile(code);
-            if(!descriptor.equals(funcDefinition)) {
+            if (!descriptor.equals(funcDefinition)) {
                 box(code, arg.getType());
             }
         }
-
         code.addMethodInstruction(Opcodes.INVOKEVIRTUAL,
                 code.getProgramInternalName(),
                 getName(),

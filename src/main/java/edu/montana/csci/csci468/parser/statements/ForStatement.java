@@ -81,8 +81,7 @@ public class ForStatement extends Statement {
     public void execute(CatscriptRuntime runtime) {
         runtime.pushScope();
 
-        // ListLiteralExpression
-        ArrayList<Object>  exprList = (ArrayList<Object>) expression.evaluate(runtime);
+        List<?> exprList = (List<?>) expression.evaluate(runtime);
         for (Object exprValue : exprList) {
             runtime.setValue(variableName, exprValue);
             for (Statement stmt : body) {
@@ -100,7 +99,7 @@ public class ForStatement extends Statement {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        Integer iterSlot = code.nextLocalStorageSlot();
+        int iterSlot = code.nextLocalStorageSlot();
 
         Label start = new Label();
         Label end = new Label();
@@ -124,7 +123,7 @@ public class ForStatement extends Statement {
         code.addTypeInstruction(Opcodes.CHECKCAST, internalNameFor(componentType.getJavaType()));
         unbox(code, componentType);
 
-        Integer varSlot = code.createLocalStorageSlotFor(variableName);
+        int varSlot = code.createLocalStorageSlotFor(variableName);
 
         if (componentType.equals(CatscriptType.INT) || componentType.equals(CatscriptType.BOOLEAN)) {
             code.addVarInstruction(Opcodes.ISTORE, varSlot);
@@ -140,5 +139,6 @@ public class ForStatement extends Statement {
         code.addLabel(end);
 
     }
+
 
 }

@@ -95,50 +95,33 @@ public class AdditiveExpression extends Expression {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        // the AdditiveExpression is used for integer types and also for strings
-        // we need to handle these two possibilities
-        // Situation examples
-        // 1.) var x = 1 + 1 (or 1 - 1)
-        // 2.) var x = 'a' + 'b'
-
-        // Are we dealing with integers?
-        if (getType().equals(CatscriptType.INT)) { // yes, we are dealing with ints
-            // Example: var x = 1 - 1
-            // compile left-hand side
+        // Determine if we are dealing with integers or strings
+        if (getType() == CatscriptType.INT) {
+            // Integer addition/subtraction
             getLeftHandSide().compile(code);
-            // compile right-hand side
             getRightHandSide().compile(code);
-            // is this an additive or subtraction expression
             if (isAdd()) {
-                // additive
                 code.addInstruction(Opcodes.IADD);
             } else {
-                // subtraction
                 code.addInstruction(Opcodes.ISUB);
             }
-        } else { // we are dealing with strings, potentially
-            // compile left-hand side
+        } else {
+            // String concatenation
             getLeftHandSide().compile(code);
-            // is left-hand side an int?
-            if (getLeftHandSide().getType().equals(CatscriptType.INT)) {
-                code.addMethodInstruction(Opcodes.INVOKESTATIC, internalNameFor(String.class), "valueOf", "(I)Ljava/lang/String;");
+            if (getLeftHandSide().getType() == CatscriptType.INT) {
+                code.addMethodInstruction(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(I)Ljava/lang/String;");
             } else {
-                code.addMethodInstruction(Opcodes.INVOKESTATIC, internalNameFor(String.class), "valueOf", "(Ljava/lang/Object;)Ljava/lang/String;");
+                code.addMethodInstruction(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(Ljava/lang/Object;)Ljava/lang/String;");
             }
-
-            // compile right-hand side
             getRightHandSide().compile(code);
-
-            if (getRightHandSide().getType().equals(CatscriptType.INT)) {
-                code.addMethodInstruction(Opcodes.INVOKESTATIC, internalNameFor(String.class), "valueOf", "(I)Ljava/lang/String;");
+            if (getRightHandSide().getType() == CatscriptType.INT) {
+                code.addMethodInstruction(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(I)Ljava/lang/String;");
             } else {
-                code.addMethodInstruction(Opcodes.INVOKESTATIC, internalNameFor(String.class), "valueOf", "(Ljava/lang/Object;)Ljava/lang/String;");
+                code.addMethodInstruction(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(Ljava/lang/Object;)Ljava/lang/String;");
             }
-
-            code.addMethodInstruction(Opcodes.INVOKEVIRTUAL, internalNameFor(String.class), "concat", "(Ljava/lang/String;)Ljava/lang/String;");
-
+            code.addMethodInstruction(Opcodes.INVOKEVIRTUAL, "java/lang/String", "concat", "(Ljava/lang/String;)Ljava/lang/String;");
         }
-
     }
+
 
 }

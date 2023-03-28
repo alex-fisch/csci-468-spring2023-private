@@ -77,19 +77,15 @@ public class UnaryExpression extends Expression {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        // compile right-hand side
         getRightHandSide().compile(code);
-        // is minus?
         if (isMinus()) {
-            // multiply two integers
             code.addInstruction(Opcodes.INEG);
         } else {
             code.pushConstantOntoStack(true);
-            // int xor
             code.addInstruction(Opcodes.IXOR);
         }
-
     }
+
 
 
 }

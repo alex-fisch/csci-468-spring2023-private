@@ -75,17 +75,20 @@ public class ComparisonExpression extends Expression {
     public Object evaluate(CatscriptRuntime runtime) {
         Integer lhs = (Integer) leftHandSide.evaluate(runtime);
         Integer rhs = (Integer) rightHandSide.evaluate(runtime);
-        if (operator.getType().equals(GREATER)) {
-            return lhs > rhs;
-        } else if (operator.getType().equals(GREATER_EQUAL)) {
-            return lhs >= rhs;
-        } else if (operator.getType().equals(LESS)) {
-            return lhs < rhs;
-        } else if (operator.getType().equals(LESS_EQUAL)) {
-            return lhs <= rhs;
+        switch (operator.getType()) {
+            case GREATER:
+                return lhs > rhs;
+            case GREATER_EQUAL:
+                return lhs >= rhs;
+            case LESS:
+                return lhs < rhs;
+            case LESS_EQUAL:
+                return lhs <= rhs;
+            default:
+                return super.evaluate(runtime);
         }
-        return super.evaluate(runtime);
     }
+
 
     @Override
     public void transpile(StringBuilder javascript) {

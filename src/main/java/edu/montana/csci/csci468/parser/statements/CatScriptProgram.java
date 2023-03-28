@@ -79,7 +79,8 @@ public class CatScriptProgram extends Statement {
     @Override
     public void execute(CatscriptRuntime runtime) {
         if (expression != null) {
-            print(expression.evaluate(runtime));
+            String result = (String) expression.evaluate(runtime);
+            System.out.print(result);
         } else {
             for (Statement statement : statements) {
                 statement.execute(runtime);
@@ -90,7 +91,7 @@ public class CatScriptProgram extends Statement {
     @Override
     public void transpile(StringBuilder javascript) {
         if (isExpression()) {
-            javascript.append("print(");
+            javascript.append("console.log(");
             expression.transpile(javascript);
             javascript.append(");\n");
         } else {
@@ -116,6 +117,7 @@ public class CatScriptProgram extends Statement {
             code.addInstruction(Opcodes.RETURN);
         }
     }
+
 
 
 }

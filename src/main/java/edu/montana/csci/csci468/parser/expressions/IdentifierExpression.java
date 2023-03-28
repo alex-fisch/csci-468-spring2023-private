@@ -53,30 +53,23 @@ public class IdentifierExpression extends Expression {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        // see if there is a local storage slot for variable
         Integer localSlot = code.resolveLocalStorageSlotFor(getName());
-
-        // does it exist?
-        if (localSlot != null) { // yes! there is a local storage slot
-            // local variable
+        if (localSlot != null) {
             if (getType().equals(CatscriptType.INT) || getType().equals(CatscriptType.BOOLEAN)) {
                 code.addVarInstruction(Opcodes.ILOAD, localSlot);
             } else {
                 code.addVarInstruction(Opcodes.ALOAD, localSlot);
             }
         } else {
-            // global variable
             code.addVarInstruction(Opcodes.ALOAD, 0);
             String descName = "I";
-
             if (!getType().equals(CatscriptType.INT) && !getType().equals(CatscriptType.BOOLEAN)) {
                 descName = "L" + internalNameFor(getType().getJavaType()) + ";";
             }
-
             code.addFieldInstruction(Opcodes.GETFIELD, getName(), descName, code.getProgramInternalName());
-
         }
     }
+
 
 
 }
