@@ -24,19 +24,19 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
-[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
-[ERROR] Tests run: 21, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.014 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
-[ERROR] elseStatementEnsuresClosingBrace  Time elapsed: 0.006 s  <<< ERROR!
+[ERROR] Tests run: 21, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.009 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
+[ERROR] elseStatementEnsuresClosingBrace  Time elapsed: 0.003 s  <<< ERROR!
 java.lang.StringIndexOutOfBoundsException: Index 30 out of bounds for length 30
 	at edu.montana.csci.csci468.parser.CatscriptParserStatementsTest.elseStatementEnsuresClosingBrace(CatscriptParserStatementsTest.java:68)
 
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest
-[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserErrorsTest
 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in edu.montana.csci.csci468.parser.CatscriptParserErrorsTest
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
-[ERROR] Tests run: 8, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
+[ERROR] Tests run: 8, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
 [ERROR] ifStatementBranchesDoNotConflic  Time elapsed: 0 s  <<< ERROR!
 java.lang.StringIndexOutOfBoundsException: Index 45 out of bounds for length 45
 	at edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest.ifStatementBranchesDoNotConflic(CatscriptParserSymbolCheckingTest.java:59)
@@ -46,10 +46,10 @@ java.lang.StringIndexOutOfBoundsException: Index 56 out of bounds for length 56
 	at edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest.paramsDoNotConflictWithEachOther(CatscriptParserSymbolCheckingTest.java:52)
 
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
-[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
 [INFO] Running edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest
-[ERROR] Tests run: 9, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.01 s <<< FAILURE! - in edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest
-[ERROR] localVarStatementsWorkProperly  Time elapsed: 0.001 s  <<< ERROR!
+[ERROR] Tests run: 9, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.008 s <<< FAILURE! - in edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest
+[ERROR] localVarStatementsWorkProperly  Time elapsed: 0 s  <<< ERROR!
 java.lang.StringIndexOutOfBoundsException: Index 49 out of bounds for length 49
 	at edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest.localVarStatementsWorkProperly(CatscriptStatementExecutionTest.java:43)
 
@@ -60,7 +60,7 @@ java.lang.StringIndexOutOfBoundsException: Index 64 out of bounds for length 64
 [INFO] Running edu.montana.csci.csci468.eval.CatscriptBasicExpressionEvalTest
 [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in edu.montana.csci.csci468.eval.CatscriptBasicExpressionEvalTest
 [INFO] Running edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest
-[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -76,8 +76,8 @@ java.lang.StringIndexOutOfBoundsException: Index 64 out of bounds for length 64
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.588 s
-[INFO] Finished at: 2023-04-28T09:42:47-06:00
+[INFO] Total time:  1.169 s
+[INFO] Finished at: 2023-05-01T11:57:36-06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
 [ERROR] 
