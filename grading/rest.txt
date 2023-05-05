@@ -28,8 +28,8 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.502 s
-[INFO] Finished at: 2023-05-05T14:40:18-06:00
+[INFO] Total time:  0.514 s
+[INFO] Finished at: 2023-05-05T15:36:28-06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project csci-468-spring2022: Compilation failure
 [ERROR] /Users/carson/Projects/msu/csci-468-spring2023/grading/scripts/repos/alexander_fischer/src/test/java/edu/montana/csci/csci468/bytecode/CapstoneTestsForAlex.java:[44,2] reached end of file while parsing
