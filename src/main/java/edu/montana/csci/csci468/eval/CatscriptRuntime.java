@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import java.util.Map;
 
 // TODO - implement proper scoping
+
+//complete
 public class CatscriptRuntime {
     LinkedList<Map<String, Object>> scopes = new LinkedList<>();
 

@@ -135,7 +135,7 @@ public class CatScriptTokenizer {
         }
         else tokenList.addToken(ERROR, "<Unexpected Token: [" + takeChar() + "]>", start, position, line, lineOffset);
     }
-
+//complete
     private void consumeWhitespace() { //done
         while (!tokenizationEnd() && (peek() == ' ' || peek() == '\r' || peek() == '\t' || peek() == '\n')) {
             char c = peek();
