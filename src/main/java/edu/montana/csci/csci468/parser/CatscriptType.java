@@ -34,20 +34,11 @@ public class CatscriptType {
 
     // TODO memoize this call
     static final ConcurrentHashMap<CatscriptType, ListType> LIST_TYPE_CACHE = new ConcurrentHashMap<>();
-
-    public static CatscriptType getListType(CatscriptType type) {
-        // get the list type from cache storage
-        ListType list_type = LIST_TYPE_CACHE.get(type);
-        // check if list_type exists
-        if (list_type == null) { // list_type does NOT exist
-            // create a new instance of the ListType
-            list_type = new ListType(type);
-            // insert the new list type instance into out cache storage
-            LIST_TYPE_CACHE.put(type, list_type);
-        }
-        // return the list_type
-        return list_type;
+    // This line creates a ConcurrentHashMap to store the cached ListType objects.
+    public static CatscriptType getListType(CatscriptType type) {//This line tries to get the ListType object from the cache by reading the given CatscriptType
+        return LIST_TYPE_CACHE.computeIfAbsent(type, ListType::new);//If the ListType object is not already in the cache, computeIfAbsent will create one
     }
+
 
 
     @Override
