@@ -615,12 +615,12 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram15 extends edu/mo
 
 
  ================================================
-[ERROR] Tests run: 9, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.062 s <<< FAILURE! - in edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest
-[ERROR] localVarStatementsWorkProperly  Time elapsed: 0.002 s  <<< ERROR!
+[ERROR] Tests run: 9, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.055 s <<< FAILURE! - in edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest
+[ERROR] localVarStatementsWorkProperly  Time elapsed: 0.003 s  <<< ERROR!
 java.lang.StringIndexOutOfBoundsException: Index 49 out of bounds for length 49
 	at edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest.localVarStatementsWorkProperly(CatscriptStatementExecutionTest.java:40)
 
-[ERROR] varInsideFunctionWorksProperly  Time elapsed: 0.001 s  <<< ERROR!
+[ERROR] varInsideFunctionWorksProperly  Time elapsed: 0 s  <<< ERROR!
 java.lang.StringIndexOutOfBoundsException: Index 64 out of bounds for length 64
 	at edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest.varInsideFunctionWorksProperly(CatscriptStatementExecutionTest.java:48)
 
@@ -2638,7 +2638,7 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram69 extends edu/mo
 
 
  ================================================
-[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -2651,8 +2651,8 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram69 extends edu/mo
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.147 s
-[INFO] Finished at: 2023-05-05T21:26:20-06:00
+[INFO] Total time:  1.126 s
+[INFO] Finished at: 2023-05-05T22:39:32-06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
 [ERROR] 
